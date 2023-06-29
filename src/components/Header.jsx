@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     //backgroundColor: 'powderblue',
     width: '100%',
     paddingHorizontal: 15,
-    paddingTop: 30,
+    paddingTop: 35,
     flexDirection: 'column',
     title: {
       fontSize: 35,
