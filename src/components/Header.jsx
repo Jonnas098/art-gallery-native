@@ -1,18 +1,18 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { Link } from 'react-router-native';
 
-const Separator = () => <View style={styles.hr}/>
+const Separator = () => <View style={styles.separator}/>
 
 const Header = () => {
   return(
-    <View style={styles.container}>
+    <View style={styles.header}>
       <View>
-        <Text style={styles.headerTitle}>My Galery</Text>
+        <Text style={styles.header.title}>My Galery</Text>
       </View>
       <Separator/>
       <View style={styles.navbar}>
-        <Text>art</Text>
-        <Text>profile</Text>
+        <Text style={styles.navbar.anchords}>art</Text>
+        <Text style={styles.navbar.anchords}>profile</Text>
       </View>
       <Separator/>
     </View>
@@ -22,31 +22,32 @@ const Header = () => {
 export default Header
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-    flexWrap: 'wrap',
+  header: {
+    //backgroundColor: 'powderblue',
     width: '100%',
-    //backgroundColor: 'skyblue',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingHorizontal: 15,
+    paddingTop: 30,
+    flexDirection: 'column',
+    title: {
+      fontSize: 35,
+      textAlign: 'center',
+      fontFamily: 'serif'
+    },
   },
-  headerTitle: {
-    fontSize: 35,
-    textAlign: 'center',
-    fontFamily: 'Times-New-Roman'
+  separator: {
+    width: '100%',
+    marginVertical: 8,
+    borderBottomColor: 'black',
+    borderBottomWidth: StyleSheet.hairlineWidth
   },
   navbar: {
-    flex: 2,
+    //backgroundColor: 'skyblue',
+    width: '100%',
     flexDirection: 'row',
-    width: '90%',
-    justifyContent: 'space-around'
-    //backgroundColor: 'powderblue'
-  },
-  hr: {
-    width: '90%',
-    marginVertical: 8,
-    borderBottomColor: '#737373',
-    borderBottomWidth: StyleSheet.hairlineWidth,
+    justifyContent: 'space-around',
+    anchords: {
+      fontSize: 17,
+      fontFamily: 'serif'
+    }
   }
 });
