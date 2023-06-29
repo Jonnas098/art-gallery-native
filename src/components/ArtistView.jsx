@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React, { useState, useEffect} from 'react';
 import artService from '../services/artServices';
-import ArtWorkView from './artWorkView';
+import ArtWorkView from './ArtWorkView';
 
 const ArtistView = () => {
   const [artists, setArtists] = useState([])
@@ -48,11 +48,13 @@ const ArtistView = () => {
 
 const styles = StyleSheet.create({
   artistView: {
-    width: '90%',
+    width: '100%',
+    paddingHorizontal: 15
   },
   authorName: {
     textAlign: 'center',
-    fontSize: 20
+    fontSize: 20,
+    marginVertical: 10
   }
 })
 
