@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-native';
 import Home from './src/components/Home'
 import Header from './src/components/Header';
 import ArtistView from './src/components/ArtistView';
-
+import Footer from './src/components/Footer';
 
 export default function App() {
   return (
@@ -14,7 +14,8 @@ export default function App() {
         <ScrollView style={styles.scrollArea}>
           <ArtistView/>      
         </ScrollView>
-        <StatusBar style="auto" />
+        <Footer/>
+        <StatusBar style="dark" />
     </SafeAreaView>
   );
 }
