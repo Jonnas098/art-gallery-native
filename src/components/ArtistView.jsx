@@ -16,7 +16,7 @@ const ArtistView = () => {
 
   const likeArt = (id, idArtWork) => {
     const artist = artists.findIndex(a => a.id === id)
-    const artWork = artists[artist].obras.findIndex(o => o.id === idArtWork)
+    const artWork = artists[artist].obras.findIndex(o => o._id === idArtWork)
     const updatedArtWorks = [...artists]
 
     updatedArtWorks[artist].obras[artWork].likes += 1
@@ -37,7 +37,7 @@ const ArtistView = () => {
             <ArtWorkView
               key={obra._id}
               content={obra}
-              likeFunction={()=> likeArt(element.id, obra.id)}
+              likeFunction={()=> likeArt(element.id, obra._id)}
             />
           ))}
         </View>
