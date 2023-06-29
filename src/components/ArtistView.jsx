@@ -35,7 +35,7 @@ const ArtistView = () => {
           <Text style={styles.authorName}>{element.nombre}</Text>
           {element.obras.map(obra => (
             <ArtWorkView
-              key={obra.id}
+              key={obra._id}
               content={obra}
               likeFunction={()=> likeArt(element.id, obra.id)}
             />
