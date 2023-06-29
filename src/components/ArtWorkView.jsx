@@ -18,7 +18,7 @@ const ArtWorkView = ({ likeFunction, content }) => {
       <View style={styles.info}>
         <Text style={styles.info.title}>Author:</Text>
         <Text style={styles.info.content}>{content.author}</Text>
-        <Text>Likes: {content.likes}</Text>
+        <Text style={styles.likes}>Likes: {content.likes}</Text>
       </View>
       <View style={styles.info}>
         <Text style={styles.info.title}>Place:</Text>
@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
   info: {
     flexDirection: 'row',
     alignItems: 'baseline',
+    // position: 'absolute',
     title: {
       fontSize: 21,
       marginRight: 5,
@@ -61,5 +62,11 @@ const styles = StyleSheet.create({
     content: {
       fontSize: 19
     }
+  },
+  likes: {
+    position: 'absolute',
+    right: 0,
+    fontSize: 16
+    //marginLeft: 10,
   }
 });
