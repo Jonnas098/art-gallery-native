@@ -1,0 +1,48 @@
+{
+  "artistas": [
+    {
+      "id": 1,
+      "nombre": "Artista Uno",
+      "obras": [
+        {
+          "id": 1,
+          "author": "Artista Uno",
+          "place": "Costa Rica",
+          "likes": 63,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget dignissim purus. Cras fermentum augue nunc, non commodo urna vehicula at. Pellentesque ut quam semper, congue lorem quis, finibus est. Aliquam tempus dolor dui. Sed odio lorem, elementum eget semper vitae, rhoncus at ex. Vestibulum tempor efficitur diam, quis commodo mauris tristique quis. Nulla congue magna justo, eget posuere sapien ultricies id.",
+          "img": "https://artlogic-res.cloudinary.com/w_2000,h_2000,c_limit,f_auto,fl_lossy,q_auto/artlogicstorage/htg1979/images/view/96f8f2dc94862ee4f83d05aabaa82c91j/hollistaggart-ralph-iwamoto-rain-forest-images-1955.jpg"
+        },
+        {
+          "id": 2,
+          "author": "Artista Uno",
+          "place": "France",
+          "likes": 25,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget dignissim purus. Cras fermentum augue nunc, non commodo urna vehicula at. Pellentesque ut quam semper, congue lorem quis, finibus est. Aliquam tempus dolor dui. Sed odio lorem, elementum eget semper vitae, rhoncus at ex. Vestibulum tempor efficitur diam, quis commodo mauris tristique quis. Nulla congue magna justo, eget posuere sapien ultricies id.",
+          "img": "https://artlogic-res.cloudinary.com/w_2000,h_2000,c_limit,f_auto,fl_lossy,q_auto:good/ws-simonleegallery2/usr/images/news/main_image/259/clw_.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Artista Dos",
+      "obras": [
+        {
+          "id": 1,
+          "author": "Artista Dos",
+          "place": "Costa Rica",
+          "likes": 24,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget dignissim purus. Cras fermentum augue nunc, non commodo urna vehicula at. Pellentesque ut quam semper, congue lorem quis, finibus est. Aliquam tempus dolor dui. Sed odio lorem, elementum eget semper vitae, rhoncus at ex. Vestibulum tempor efficitur diam, quis commodo mauris tristique quis. Nulla congue magna justo, eget posuere sapien ultricies id.",
+          "img": "https://artlogic-res.cloudinary.com/w_5000,h_5000,c_limit,f_auto,fl_lossy,q_auto:good/artlogicstorage/philipmouldgallery/images/view/89717cab8f6ef8aefe3bef0d6a90a2b4p/philipmould-company-edward-wolfe-the-initiate-late-1920s.png"
+        },
+        {
+          "id": 2,
+          "author": "Artista Dos",
+          "place": "Brusels",
+          "likes": 41,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget dignissim purus. Cras fermentum augue nunc, non commodo urna vehicula at. Pellentesque ut quam semper, congue lorem quis, finibus est. Aliquam tempus dolor dui. Sed odio lorem, elementum eget semper vitae, rhoncus at ex. Vestibulum tempor efficitur diam, quis commodo mauris tristique quis. Nulla congue magna justo, eget posuere sapien ultricies id.",
+          "img": "https://artlogic-res.cloudinary.com/w_2000,h_2000,c_limit,f_auto,fl_lossy,q_auto:good/ws-simonleegallery2/usr/images/news/main_image/253/flm_2022_aloud-the-expos-_12322_floor-i_p.jpg"
+        }
+      ]
+    }
+  ]
+}
