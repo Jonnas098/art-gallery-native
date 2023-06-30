@@ -1,19 +1,19 @@
-import { StyleSheet, Text, View, Image, Button } from 'react-native';
+import { TouchableHighlight, StyleSheet, Text, View, Image, Button } from 'react-native';
 
 const Separator = () => <View style={styles.separator}/>
 
-const ArtWorkView = ({ likeFunction, content }) => {
+const ArtWorkView = ({ likeFunction, content, liked }) => {
+
+  const label = liked ? "Dislike" : "like"
 
   return(
     <View style={styles.artWorkView}>
-      <Image
-        source={{ uri: content.img }}
-        style={styles.artWork}
-      />
-      <Button
-        title='Like'
-        onPress={likeFunction}
-      />
+      <TouchableHighlight onPress={likeFunction}>
+        <Image
+          source={{ uri: content.img }}
+          style={styles.artWork}
+        />
+      </TouchableHighlight>
       <Separator/>
       <View style={styles.info}>
         <Text style={styles.info.title}>Author:</Text>
@@ -36,7 +36,9 @@ export default ArtWorkView
 
 const styles = StyleSheet.create({
   artWorkView: {
-    marginVertical: 10
+    width: '100%',
+    marginVertical: 10,
+    //backgroundColor: 'steelblue'
   },
   artWork: {
     width: 'auto',
@@ -52,7 +54,6 @@ const styles = StyleSheet.create({
   info: {
     flexDirection: 'row',
     alignItems: 'baseline',
-    // position: 'absolute',
     title: {
       fontSize: 21,
       marginRight: 5,
@@ -60,13 +61,13 @@ const styles = StyleSheet.create({
       fontFamily: 'serif'
     },
     content: {
-      fontSize: 19
+      fontSize: 19,
+      fontFamily: ''
     }
   },
   likes: {
     position: 'absolute',
     right: 0,
     fontSize: 16
-    //marginLeft: 10,
   }
 });
