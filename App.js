@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, Text, View, ScrollView } from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import { NativeRouter, Route, Routes } from 'react-router-native';
 
 import Home from './src/components/Home'
@@ -16,14 +16,10 @@ export default function App() {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/profile' element={<Profile/>}/>
-          <Route path='/art' element={
-          <ScrollView style={styles.scrollArea}>
-            <ArtistView/>      
-          </ScrollView>
-          }/>
+          <Route path='/art' element={<ArtistView/>}/>
         </Routes>
         <Footer/>
-        <StatusBar style="dark" />
+        <StatusBar style="auto" />
       </SafeAreaView>
     </NativeRouter>
   );
@@ -34,9 +30,5 @@ const styles = StyleSheet.create({
     flex: 1,
     //backgroundColor: 'steelblue',
     alignItems: 'center'
-  },
-  scrollArea: {
-    //backgroundColor: 'aquamarine',
-    width: '100%',
   }
 });
