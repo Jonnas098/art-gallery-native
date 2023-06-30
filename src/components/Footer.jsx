@@ -12,6 +12,11 @@ export default Footer
 
 const styles = new StyleSheet.create({
   footer: {
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',
+    alignItems: 'center',
+    backgroundColor: 'white',
     paddingVertical: 2
   }
 })
