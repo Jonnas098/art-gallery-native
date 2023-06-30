@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
-import { Link } from 'react-router-native';
+import { NativeRouter, Link } from 'react-router-native';
 
 const Separator = () => <View style={styles.separator}/>
 
@@ -7,12 +7,18 @@ const Header = () => {
   return(
     <View style={styles.header}>
       <View>
-        <Text style={styles.header.title}>My Galery</Text>
+        <Link to='/' underlayColor='#f0f4f7'>
+          <Text style={styles.header.title}>My Galery</Text>
+        </Link>
       </View>
       <Separator/>
       <View style={styles.navbar}>
-        <Text style={styles.navbar.anchords}>art</Text>
-        <Text style={styles.navbar.anchords}>profile</Text>
+        <Link to='/art' style={{width: '50%'}} underlayColor='#f0f4f7'>
+          <Text style={styles.navbar.anchords}>art</Text>
+        </Link>
+        <Link to='/profile' style={{width: '50%'}} underlayColor='#f0f4f7'>
+          <Text style={styles.navbar.anchords}>profile</Text>
+        </Link>
       </View>
       <Separator/>
     </View>
@@ -46,8 +52,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     anchords: {
+      //backgroundColor: 'powderblue',
       fontSize: 17,
-      fontFamily: 'serif'
+      fontFamily: 'serif',
+      textAlign: 'center'
     }
   }
 });
