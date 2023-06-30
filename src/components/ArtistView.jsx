@@ -28,22 +28,24 @@ const ArtistView = () => {
     })
   };
 
-  return(
+
+  return (
     <View style={styles.artistView}>
-      {artists.map(element => (
+      {artists.length === 0 ? <Text style={styles.authorName}>Loading...</Text> :
+      artists.map(element => (
         <View key={element.id}>
           <Text style={styles.authorName}>{element.nombre}</Text>
           {element.obras.map(obra => (
             <ArtWorkView
               key={obra._id}
               content={obra}
-              likeFunction={()=> likeArt(element.id, obra._id)}
+              likeFunction={() => likeArt(element.id, obra._id)}
             />
           ))}
         </View>
       ))}
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
