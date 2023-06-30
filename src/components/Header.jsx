@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
-import { NativeRouter, Link } from 'react-router-native';
+import { Link } from 'react-router-native';
 
 const Separator = () => <View style={styles.separator}/>
 
