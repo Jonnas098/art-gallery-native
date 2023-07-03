@@ -56,7 +56,9 @@ const styles = StyleSheet.create({
       //backgroundColor: 'powderblue',
       fontSize: 17,
       fontFamily: 'serif',
-      textAlign: 'center'
+      textAlign: 'center',
+      // borderBottomColor: 'black',
+      // borderBottomWidth: StyleSheet.hairlineWidth
     }
   }
 });
