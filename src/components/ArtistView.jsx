@@ -6,8 +6,6 @@ import ArtWorkView from './ArtWorkView';
 const ArtistView = () => {
   const [artists, setArtists] = useState([])
   const [refreshing, setRefreshing] = useState(false)
-  const [liked, setLiked] = useState(false)
-  const [backCount, setBackCount] = useState(0)
 
   useEffect(()=>{
     console.log("Effect");
@@ -26,28 +24,6 @@ const ArtistView = () => {
     })
   }, [])
 
-  const likeArt = (id, idArtWork) => {
-    const artist = artists.findIndex(a => a.id === id)
-    const artWork = artists[artist].obras.findIndex(o => o._id === idArtWork)
-    const updatedArtWorks = [...artists]
-
-    setBackCount(backCount + 1)
-    setTimeout(()=> setBackCount(0), 500)
-    console.log(backCount)
-
-    if(backCount === 1) {
-      setBackCount(0)
-      updatedArtWorks[artist].obras[artWork].likes += 1
-      setArtists(updatedArtWorks)
-      artService.update(id, updatedArtWorks[artist])
-      .then(updated => {
-        console.log(updated);
-      })
-    }
-
-    Vibration.vibrate(10)
-  };
-
   return (
     <ScrollView
       style={styles.artistView}
@@ -57,14 +33,10 @@ const ArtistView = () => {
         artists.map(element => (
           <View key={element.id}>
             <Text style={styles.authorName}>{element.nombre}</Text>
-            {element.obras.map(artWork => (
-              <ArtWorkView
-                key={artWork._id}
-                content={artWork}
-                liked={liked}
-                likeFunction={() => likeArt(element.id, artWork._id)}
-              />
-            ))}
+            <ArtWorkView
+              arr={artists}
+              content={element}
+            />
           </View>
         ))}
     </ScrollView>
