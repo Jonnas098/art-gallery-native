@@ -10,7 +10,7 @@ const ArtWorkView = ({ content, arr }) => {
 
   const label = liked ? '❤️' : '🖤'
 
-  const testFun = (id, idArtWork) => {
+  const likeArt = (id, idArtWork) => {
     const artist = arr.findIndex(a => a.id === content.id)
     const artWorks = arr[artist].obras.findIndex(o => o._id === idArtWork)
     const updatedArts = [...arr]
@@ -42,7 +42,7 @@ const ArtWorkView = ({ content, arr }) => {
   return(
     content.obras.map(artWork => (
       <View key={artWork._id} style={styles.artWorkView}>
-        <TouchableHighlight onPress={()=> {testFun(content.id, artWork._id)}}>
+        <TouchableHighlight onPress={()=> {likeArt(content.id, artWork._id)}}>
           <Image
             source={{ uri: artWork.img }}
             style={styles.artWork}
