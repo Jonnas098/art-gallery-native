@@ -4,6 +4,7 @@ import { Link } from 'react-router-native';
 const Separator = () => <View style={styles.separator}/>
 
 const Header = () => {
+
   return(
     <View style={styles.header}>
       <View>
